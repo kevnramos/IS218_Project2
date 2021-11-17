@@ -4,7 +4,7 @@
 
 ### Kevin Ramos
 
-[Website Hosted on Github Pages]()
+[Website Hosted on GitHub Pages](https://kevnramos.github.io/IS218_Project2/)
 
 Command Line, Git, Docker, and Azure pages were created for Project 1
 with Kevin Huang.
