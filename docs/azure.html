@@ -4,11 +4,11 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" rel="stylesheet">
 
     <title>Index</title>
 </head>
@@ -18,15 +18,15 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand mb-0 h1" href="index.html">Tutorial</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a aria-current="page" class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="command.html">Command Line</a>
@@ -66,39 +66,35 @@
     </nav>
 
 
-
-
     <div class="container bg-light">
+        <br>
         <h1 class="text-danger">Hosting on Azure Cloud</h1>
 
 
+        <h4>Set Up Azure Cloud Account</h4>
+        <br>
+        <a btn-outline-danger href=https://azure.microsoft.com/en-us/free/students/ class="btn">Sign Up Here</a><br>
+        <hr>
+        <h4>Login in Command Line Terminal</h4>
 
-
-
- <h4>Set Up Azure Cloud Account</h4>
-<br>
- <a href=https://azure.microsoft.com/en-us/free/students/ class="btn btn-outline-danger">Sign Up Here</a><br>
- <hr>
- <h4>Login in Command Line Terminal</h4>
-	
 
         <p>To use our Azure cloud, we need to login to our Azure account.</p>
 
-		<p>Enter this command to login to Azure.</p>
+        <p>Enter this command to login to Azure.</p>
         <div class="card">
             <div class="card-body text-danger">
                 docker login azure
             </div>
         </div>
-		<p>After entering this command, we will be prompted to login with our browser.</p>
-		<hr>
+        <p>After entering this command, we will be prompted to login with our browser.</p>
+        <hr>
 
- <h4>Create an ACI</h4>
-	
+        <h4>Create an ACI</h4>
+
 
         <p>To use our Azure cloud, we need to create an ACI.</p>
 
-		<p>Enter this command to create ACI.</p>
+        <p>Enter this command to create ACI.</p>
         <div class="card">
             <div class="card-body text-danger">
                 docker context create aci <i>aci_name</i>
@@ -106,50 +102,50 @@
         </div>
 
 
-		<hr>
+        <hr>
 
 
- <h4>Push Image to Dockerhub</h4>
-	
+        <h4>Push Image to Dockerhub</h4>
+
 
         <p>Before we push image to docker, we must login to our account using command line.</p>
 
-		<p>Enter this command to login</p>
+        <p>Enter this command to login</p>
         <div class="card">
             <div class="card-body text-danger">
                 docker login
             </div>
         </div>
-		
 
-		   <p>Then, we need to push our image to docker hub.</p>
 
-		<p>Enter this command to login</p>
+        <p>Then, we need to push our image to docker hub.</p>
+
+        <p>Enter this command to login</p>
         <div class="card">
             <div class="card-body text-danger">
                 docker push <i>image_name</i>
             </div>
         </div>
-		
-		
-		<hr>
 
-		 <h4>Pull Image from Docker Hub to Azure Cloud</h4>
-	
+
+        <hr>
+
+        <h4>Pull Image from Docker Hub to Azure Cloud</h4>
+
 
         <p>Before we push image to docker, we must use our ACI.</p>
 
-		<p>Enter this command to use ACI</p>
+        <p>Enter this command to use ACI</p>
         <div class="card">
             <div class="card-body text-danger">
                 docker context use <i>aci_name</i>
             </div>
         </div>
-		
 
-		   <p>Then, we need to run our image on our Azure Cloud.</p>
 
-		<p>Enter this command to host our image on Azure Cloud</p>
+        <p>Then, we need to run our image on our Azure Cloud.</p>
+
+        <p>Enter this command to host our image on Azure Cloud</p>
         <div class="card">
             <div class="card-body text-danger">
                 docker run --domainname <i>unique_domain_name</i> -dp 80:80 <i>dockerhub_userID/repository_name</i>
@@ -157,27 +153,21 @@
             </div>
         </div>
 
-		<hr>
-		<h4>See our Website Hosted on IP address</h4>
-	
+        <hr>
+        <h4>See our Website Hosted on IP address</h4>
+
 
         <p>Now, we can view our website on an IP address.</p>
 
-		<p>Enter this command to view our IP address</p>
+        <p>Enter this command to view our IP address</p>
         <div class="card">
             <div class="card-body text-danger">
                 docker ps
             </div>
         </div>
-		
-		<p> We will see that our image is now hosted.</p>
-		<p> Our IP address will be under the Ports section. </p>
 
-
-
-
-
-
+        <p> We will see that our image is now hosted.</p>
+        <p> Our IP address will be under the Ports section. </p>
 
 
         <br><br>
@@ -196,9 +186,9 @@
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
 <!--
