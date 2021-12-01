@@ -4,11 +4,11 @@
 
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+          integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" rel="stylesheet">
 
     <title>Design</title>
     <link href="main.css" rel="stylesheet">
@@ -20,15 +20,15 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
             <a class="navbar-brand mb-0 h1" href="index.html">Tutorial</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
+            <button aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+                    class="navbar-toggler" data-bs-target="#navbarSupportedContent"
+                    data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                        <a aria-current="page" class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="command.html">Command Line</a>
@@ -70,102 +70,48 @@
 
     <div class="container bg-light">
         <br>
-        <h1 class="text-danger">Design</h1>
-        <h4>Basic Commands</h4>
+        <h1 class="text-danger">Design techniques in Calculator</h1>
+        <h4>Separation of Concerns</h4>
         <hr>
 
-        <h4>Navigation</h4>
+        <h4>Basics</h4>
+        <p>Separation of concerns is a design idea used in computer science to divide a computer program into seperate
+            components. Each part focuses on a different issue.
+        </p>
 
-        <p>We need to use command line to navigate our files and directories. This way, we can use important Git and
-            Docker functions
-            in the appropriate location.</p>
+        <br>
+        <hr>
 
-        <p>This command shows us what our current working directory is. </p>
-        <div class="card">
-            <div class="card-body text-danger">
-                pwd
-            </div>
-        </div>
-
-        <p>To see what files and directories are in our current location, enter the following command. </p>
-        <div class="card">
-            <div class="card-body text-danger">
-                ls
-            </div>
-        </div>
-        <p>By seeing what files and directories are in our current location, we can then
-            navigate into those locations using the change directory command. To change to a specific directory enter
-            <b>cd</b> followed
-            by the directory name.</p>
-
-        <div class="card">
-            <div class="card-body text-danger">
-                cd <i>directory</i>
-            </div>
-
-        </div>
-
-        <p> We can also enter <b>cd</b> followed by hitting the tab button twice. This would show us which directories
-            we can enter.</p>
-
-        <p> We can also return to our home directory by just entering cd by itself. We can also move back
-            to our previous directory using this command.
-
-        <div class="card">
-            <div class="card-body text-danger">
-                cd ..
-            </div>
-        </div>
+        <h4>Perfect Example</h4>
+        <p>The perfect example for separation of concerns is a number of functions in a class.</p>
+        <p>These separate functions break down a program into simpler chunks, which lowers the chance for something to
+            go wrong, and makes it easier to fix and spot bugs.
+        </p>
 
         <br>
 
+        <a class="btn btn-outline-danger"
+           href="https://github.com/kevnramos/calc2/blob/8ba2f9ccf489f753bf509d954b27620e2542ab1a/calc/calculator.py#L8-L26">
+            Example of Separation of Concerns
+        </a>
 
-        <h4>Making Changes</h4>
-
-
-        <p>To make a directory, use the command below.</p>
-        <div class="card">
-            <div class="card-body text-danger">
-                mkdir <i>directory_name</i>
-            </div>
-        </div>
         <br>
-
-        <p>To make an empty file, use the command below.</p>
-        <div class="card">
-            <div class="card-body text-danger">
-                touch <i>file_name</i>
-            </div>
-        </div>
         <br>
+        <hr>
 
-        <p>To rename a file, use the command below.</p>
-        <div class="card">
-            <div class="card-body text-danger">
-                mv <i>file_name</i> <i>new_name</i>
-            </div>
-        </div>
+        <h4>Separating Calculator Operations</h4>
+        <p>Instead of having an Addition, Subtraction, Multiplication, and Division function inside a single class,
+        we separated it into different files</p>
+
+
+        <a class="btn btn-outline-danger"
+           href="https://github.com/kevnramos/calc2/blob/8ba2f9ccf489f753bf509d954b27620e2542ab1a/calc/calculator.py#L8-L26">
+            Separating Addition, Subtraction, Multiplication, Division
+        </a>
+
+
         <br>
-
-        <p>We can also move a file to a new location using this command.</p>
-        <div class="card">
-            <div class="card-body text-danger">
-                mv <i>file_name</i> <i>directory</i>
-            </div>
-        </div>
         <br>
-
-
-        <p>Lastly, we can both move and rename a file at the same time.</p>
-        <div class="card">
-            <div class="card-body text-danger">
-                mv <i>file_name</i> <i>directory/new_name</i>
-            </div>
-        </div>
-        <br>
-
-
-        <br><br>
 
     </div>
     <footer class="bg-dark text-center text-lg-start">
@@ -181,9 +127,9 @@
 <!-- Optional JavaScript; choose one of the two! -->
 
 <!-- Option 1: Bootstrap Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+<script crossorigin="anonymous"
         integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-        crossorigin="anonymous"></script>
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
 
 <!-- Option 2: Separate Popper and Bootstrap JS -->
 <!--
